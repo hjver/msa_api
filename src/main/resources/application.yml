@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: kr.co.msa
+  devtools:
+    restart:
+      enabled: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://210.178.108.186:63306/nankim
+    username: nankim
+    password: kima1234
+server:
+  port: 8082
+  servlet:
+    encoding:
+      charset: utf-8
+      force-response: true
+      enabled: true  
+    jsp:
+      init-parameters:
+        development: true  
+mybatis:
+  type-aliases-package: kr.co.msa
+  mapper-locations: classpath:/mapper/*.xml
+
